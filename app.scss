@@ -9,7 +9,51 @@ $main-font-size: 15px;
 $main-font: 'Inter', sans-serif;
 $secondary-font: 'Lexend Deca', sans-serif;
 
+body{
+    background-color: $primary-color;
+    color: $primary-white-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
+    .wrapper{
+        background-color: $secondary-color;
+        display: flex;
+        margin: auto 8em;
+        height: 350px;
+        border-radius: 10px;
+
+        .main__container{
+            width: 30em;
+        }
+        img{
+            width: 27em;
+            float: right;
+            border-radius: 0px 10px 10px 0px;
+            filter: opacity(0.4) sepia(80%) hue-rotate(240deg) saturate(500%);
+        }
+    }
+
+    .description{
+        color: $tertiary-white-color;
+    }
+
+    ul{
+        
+        
+        list-style: none;
+        li{
+            display: inline;
+            float: left;
+            p{
+                color: $tertiary-white-color;
+            }
+        }
+        
+    }
+}
 
 .attribution {
     font-size: 11px;
