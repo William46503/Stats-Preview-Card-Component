@@ -1,4 +1,3 @@
-
 $primary-color: hsl(233, 47%, 7%);
 $secondary-color: hsl(244, 38%, 16%);
 $tertiary-color: hsl(277, 64%, 61%);
@@ -6,53 +5,84 @@ $primary-white-color: hsl(0, 0%, 100%);
 $secondary-white-color: hsla(0, 0%, 100%, 0.75);
 $tertiary-white-color: hsla(0, 0%, 100%, 0.6);
 $main-font-size: 15px;
-$main-font: 'Inter', sans-serif;
-$secondary-font: 'Lexend Deca', sans-serif;
+$main-font: 'Inter',
+sans-serif;
+$secondary-font: 'Lexend Deca',
+sans-serif;
 
-body{
+body {
     background-color: $primary-color;
     color: $primary-white-color;
+    font-size: $main-font-size;
+    font-family: $main-font;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 
-    .wrapper{
+    .wrapper {
         background-color: $secondary-color;
         display: flex;
         margin: auto 8em;
-        height: 350px;
         border-radius: 10px;
 
-        .main__container{
-            width: 30em;
+        .main__container {
+            width: 40vw;
+            margin: 8% 7% 5% 5%;
+
+            .header {
+                width: 90%;
+                margin-bottom: 10%;
+
+                span {
+                    color: $tertiary-color;
+                }
+            }
+
+            .description {
+                color: $tertiary-white-color;
+                width: 80%;
+                margin-bottom: 10%;
+                line-height: 2em;
+                font-family: $secondary-font;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                padding: 0;
+                font-family: $secondary-font;
+                
+                li {
+                    display: inline;
+                    float: left;
+                    h5{
+                        font-weight: 700;
+                    }
+                    p {
+                        color: $tertiary-white-color;
+                        font-weight: normal;
+                    }
+                }
+
+            }
         }
-        img{
-            width: 27em;
+
+        img {
+            width: 60%;
+            height: 100%;
             float: right;
             border-radius: 0px 10px 10px 0px;
             filter: opacity(0.4) sepia(80%) hue-rotate(240deg) saturate(500%);
         }
     }
 
-    .description{
-        color: $tertiary-white-color;
-    }
 
-    ul{
-        
-        
-        list-style: none;
-        li{
-            display: inline;
-            float: left;
-            p{
-                color: $tertiary-white-color;
-            }
-        }
-        
-    }
+
+
 }
 
 .attribution {
